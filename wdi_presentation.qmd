@@ -1,0 +1,62 @@
+---
+title: "WDI 2022 Presentation"
+author: "Minna Lai"
+date: "2026-02-25"
+format:
+  revealjs:
+    theme: night
+    transition: fade
+    embed-resources: true
+---
+# Introduction
+## Overview
+- This presentation covers the 2022 World Development Indicators.
+- Focus: GDP Growth, GDP per Capita, and Population.
+
+# Main Content
+## GDP vs Growth (Visualization)
+This is the scatter plot of GDP vs GDP growth in 2022
+```{python}
+#| echo: false
+import pandas as pd
+import matplotlib.pyplot as plt
+wdi_df = pd.read_csv("wdi.csv")
+plt.scatter(wdi_df["gdp_per_capita"], wdi_df["gdp_growth_rate"])
+plt.xlabel("GDP per Capita")
+plt.ylabel("Growth Rate")
+plt.show()
+```
+
+## Population Distribution
+This is the distribution of population size in 2022
+```{python}
+#| echo: false
+import pandas as pd
+import matplotlib.pyplot as plt
+wdi_df = pd.read_csv("wdi.csv")
+plt.hist(wdi_df["total_population"])
+plt.xlabel("Total Population")
+plt.ylabel("Number of Countries")
+plt.title("Distribution of Total Population (2022)")
+plt.show()
+
+```
+
+## Summary Table
+- The data shows a high degree of economic inequality.
+- Median GDP per capita is significantly lower than the mean.
+**Summary statistics for selected indicators in 2022**
+
+| Indicator        | Mean     | Median  |
+|------------------|----------|---------|
+| GDP growth rate  | 4.37     | 4.20    |
+| GDP per capita   | 20345.71 | 7587.59 |
+| Total population | 36536448 | 6465097 |
+
+# Conclusion
+## Conclusion
+- The 2022 WDI data reveals significant global inequality, evidenced by the sharp contrast between median and mean GDP per capita.
+- High-income nations do not necessarily exhibit faster growth; many developing economies show higher volatility and potential.
+- Population distribution remains extremely right-skewed, with a few nations accounting for a vast majority of the global total.
+
+# Thank you for your attention!

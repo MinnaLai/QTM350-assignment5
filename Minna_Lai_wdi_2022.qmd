@@ -1,0 +1,89 @@
+---
+title: "World Development Indicators dataset 2022"
+author: "Minna Lai"
+date: "2026-02-25"
+format:
+  html: default
+  pdf: default
+bibliography: references.bib
+---
+
+# Load dataset and import library
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+wdi_df = pd.read_csv("wdi.csv")
+```
+
+# Exploratory Data Analysis
+## GDP growth rate
+```{python}
+#| echo: true
+#| eval: true
+wdi_df["gdp_growth_rate"].describe()
+```
+
+The average GDP growth rate across countries in 2022 was about 4.37%, but the distribution shows substantial variation. While half of the countries had growth rates between approximately 2.44% and 6.20%, some countries experienced severe economic contraction, with the lowest growth rate close to -29%. In contrast, a few countries recorded extremely high growth rates, with the maximum exceeding 63%, indicating that economic growth were highly uneven across countries.
+
+
+## GDP per capita
+```{python}
+#| echo: true
+#| eval: true
+wdi_df["gdp_per_capita"].describe()
+```
+
+GDP per capita shows a highly unequal global distribution. The median GDP per capita is around 7,588 USD, which is much lower than the mean value of about 20,346 USD, indicating strong right-skewness. This skewness is driven by a small number of very wealthy countries, with the maximum GDP per capita exceeding 240,000 USD, while the poorest countries have values as low as around 259 USD. This highlights large global disparities in income and economic development.
+
+## Total population
+```{python}
+#| echo: true
+#| eval: true
+wdi_df["total_population"].describe()
+```
+
+The distribution of total population is extremely right-skewed. While the median country population is about 6.5 million, the mean is much higher at approximately 36.5 million, reflecting the presence of a few very large countries. The smallest country has a population of just over 11,000, whereas the largest exceeds 1.4 billion people. This large variation demonstrates the wide differences in country sizes and population scales across the world.
+
+# Visualisations
+```{python}
+#| echo: false
+#| eval: true
+#| label: fig-gdp-growth
+#| fig-cap: "Relationship between GDP per capita and GDP growth rate in 2022. Source: World Bank World Development Indicators."
+plt.scatter(wdi_df["gdp_per_capita"], wdi_df["gdp_growth_rate"])
+plt.xlabel("GDP per Capita (USD)")
+plt.ylabel("GDP Growth Rate (%)")
+plt.title("GDP per Capita vs GDP Growth Rate (2022)")
+plt.show()
+
+```
+
+```{python}
+#| echo: false
+#| eval: true
+#| label: fig-population-distribution
+#| fig-cap: "Distribution of total population across countries in 2022. Source: World Bank World Development Indicators."
+plt.hist(wdi_df["total_population"])
+plt.xlabel("Total Population")
+plt.ylabel("Number of Countries")
+plt.title("Distribution of Total Population (2022)")
+plt.show()
+
+```
+
+# Summary table of key statistics
+
+: Summary statistics for selected indicators in 2022. {#tbl-summary}
+
+| Indicator        | Mean     | Median  |
+|------------------|----------|---------|
+| GDP growth rate  | 4.37     | 4.20    |
+| GDP per capita   | 20345.71 | 7587.59 |
+| Total population | 36536448 | 6465097 |
+
+# Exploratory Data Analysis
+The global economic landscape in 2022 was shaped by post-pandemic recovery and significant inflationary pressures [@imf2022outlook]. From the data used in this report from @worldbank2024wdi, we can see the overall patterns of the economic landscape under this circumstance.
+
+As shown in figure @fig-gdp-growth, countries with higher GDP per capita do not necessarily experience higher GDP growth rates, indicating that economic growth and income level are not perfectly correlated. In figure @fig-population-distribution, we can see a right skewed distribution of population. Table @tbl-summary summarises mean and median values for GDP growth rate, GDP per capita, and total population in 2022.
+
+
