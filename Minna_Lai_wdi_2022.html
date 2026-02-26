@@ -136,7 +136,7 @@ div.csl-indent {
 
 <section id="load-dataset-and-import-library" class="level1">
 <h1>Load dataset and import library</h1>
-<div id="f1feadc4" class="cell" data-execution_count="1">
+<div id="89eb3bd2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>wdi_df <span class="op">=</span> pd.read_csv(<span class="st">"wdi.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -146,9 +146,9 @@ div.csl-indent {
 <h1>Exploratory Data Analysis</h1>
 <section id="gdp-growth-rate" class="level2">
 <h2 class="anchored" data-anchor-id="gdp-growth-rate">GDP growth rate</h2>
-<div id="f5f1fc01" class="cell" data-execution_count="2">
+<div id="ddfd2d70" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>wdi_df[<span class="st">"gdp_growth_rate"</span>].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>count    202.000000
 mean       4.368901
 std        6.626811
@@ -164,9 +164,9 @@ Name: gdp_growth_rate, dtype: float64</code></pre>
 </section>
 <section id="gdp-per-capita" class="level2">
 <h2 class="anchored" data-anchor-id="gdp-per-capita">GDP per capita</h2>
-<div id="83c4d10b" class="cell" data-execution_count="3">
+<div id="f75979df" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>wdi_df[<span class="st">"gdp_per_capita"</span>].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>count       203.000000
 mean      20345.707649
 std       31308.942225
@@ -182,9 +182,9 @@ Name: gdp_per_capita, dtype: float64</code></pre>
 </section>
 <section id="total-population" class="level2">
 <h2 class="anchored" data-anchor-id="total-population">Total population</h2>
-<div id="74461a1b" class="cell" data-execution_count="4">
+<div id="ef8c1a3f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>wdi_df[<span class="st">"total_population"</span>].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>count    2.170000e+02
 mean     3.653645e+07
 std      1.410583e+08
@@ -271,7 +271,7 @@ Table&nbsp;1: Summary statistics for selected indicators in 2022.
 <section id="exploratory-data-analysis-1" class="level1">
 <h1>Exploratory Data Analysis</h1>
 <p>The global economic landscape in 2022 was shaped by post-pandemic recovery and significant inflationary pressures <span class="citation" data-cites="imf2022outlook">(<a href="#ref-imf2022outlook" role="doc-biblioref">International Monetary Fund 2022</a>)</span>. From the data used in this report from <span class="citation" data-cites="worldbank2024wdi">World Bank (<a href="#ref-worldbank2024wdi" role="doc-biblioref">2022</a>)</span>, we can see the overall patterns of the economic landscape under this circumstance.</p>
-<p>As shown in figure <a href="#fig-gdp-growth" class="quarto-xref">Figure&nbsp;1</a>, countries with higher GDP per capita do not necessarily experience higher GDP growth rates, indicating that economic growth and income level are not perfectly correlated. In figure <a href="#fig-population-distribution" class="quarto-xref">Figure&nbsp;2</a>, we can see a right skewed distribution of population. Table <a href="#tbl-summary" class="quarto-xref">Table&nbsp;1</a> summarises mean and median values for GDP growth rate, GDP per capita, and total population in 2022.</p>
+<p>As shown in <a href="#fig-gdp-growth" class="quarto-xref">Figure&nbsp;1</a>, countries with higher GDP per capita do not necessarily experience higher GDP growth rates, indicating that economic growth and income level are not perfectly correlated. In <a href="#fig-population-distribution" class="quarto-xref">Figure&nbsp;2</a>, we can see a right skewed distribution of population. <a href="#tbl-summary" class="quarto-xref">Table&nbsp;1</a> summarises mean and median values for GDP growth rate, GDP per capita, and total population in 2022.</p>
 
 </section>
 

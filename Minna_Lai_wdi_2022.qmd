@@ -84,6 +84,6 @@ plt.show()
 # Exploratory Data Analysis
 The global economic landscape in 2022 was shaped by post-pandemic recovery and significant inflationary pressures [@imf2022outlook]. From the data used in this report from @worldbank2024wdi, we can see the overall patterns of the economic landscape under this circumstance.
 
-As shown in figure @fig-gdp-growth, countries with higher GDP per capita do not necessarily experience higher GDP growth rates, indicating that economic growth and income level are not perfectly correlated. In figure @fig-population-distribution, we can see a right skewed distribution of population. Table @tbl-summary summarises mean and median values for GDP growth rate, GDP per capita, and total population in 2022.
+As shown in @fig-gdp-growth, countries with higher GDP per capita do not necessarily experience higher GDP growth rates, indicating that economic growth and income level are not perfectly correlated. In @fig-population-distribution, we can see a right skewed distribution of population. @tbl-summary summarises mean and median values for GDP growth rate, GDP per capita, and total population in 2022.
 
 
